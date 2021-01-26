@@ -1,0 +1,39 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Products</h1>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        
+    </div>
+    <div class="col-md-7">
+        <div>
+            
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Select Product</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th data-sortable="true">Product Price</th>
+                        
+                    </tr>
+                    <tr *ngFor="let pd of service.list">
+                        
+                        <input type="checkbox" value=" {{pd.productId}}" (change)="onChange(pd.productName, $event)">
+                        <td >{{pd.productId}}</td>
+                        <td >{{pd.productName}}</td>
+                        <td >{{pd.productPrice}}</td>
+                        
+                        
+                    </tr>
+                    <button (click)="Save()">Place Order</button>
+                    <label style="font-size:18px;color: red">{{errorMsg}}</label><br> 
+                     
+                </thead>
+                
+            </table>
+            <input [(ngModel)]="products" style="font-size:18px;color: red;width: 500px;border-top: 0cm;border-left: 0cm;border-right: 0cm;border-bottom: 0cm;"><br>
+        
+        </div>
+    </div>
+</div>
