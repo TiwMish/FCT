@@ -64,6 +64,7 @@ export class ProductComponent implements OnInit {
   
   submit() {
     console.log("this.form.value.name");
+    console.log("Test push from FCTApp");
   }
 }
 

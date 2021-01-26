@@ -154,3 +154,11 @@ C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\obj\Debug\net5.0\ref\Fisrt
 C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\obj\Debug\net5.0\FisrtCanadianTitle.pdb
 C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\obj\Debug\net5.0\FisrtCanadianTitle.genruntimeconfig.cache
 C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\obj\Debug\net5.0\FisrtCanadianTitle.csprojAssemblyReference.cache
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\angular.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\e2e\tsconfig.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\package-lock.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\package.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\tsconfig.app.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\tsconfig.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\tsconfig.spec.json
+C:\Users\Isha\Source\Repos\AngCore\FisrtCanadianTitle\bin\Debug\net5.0\FCTApp\tslint.json

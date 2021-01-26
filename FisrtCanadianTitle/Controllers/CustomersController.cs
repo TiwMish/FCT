@@ -20,7 +20,7 @@ namespace FisrtCanadianTitle.Controllers
             _context = context;
         }
 
-        // GET: api/Customers
+        // GET: api/Customers -- Test push from FCT
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomer()
         {
