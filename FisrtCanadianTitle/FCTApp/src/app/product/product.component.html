@@ -1,39 +1,78 @@
 <div class="jumbotron py-3">
-    <h1 class="display-4 text-center">Products</h1>
+    <h1 class="display-4 text-center">FCT Market Place</h1>
 </div>
 <div class="row">
     <div class="col-md-5">
-        
-    </div>
-    <div class="col-md-7">
-        <div>
-            
-            <table class="table">
-                <thead class="thead-light">
-                    <tr>
-                        <th>Select Product</th>
-                        <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th data-sortable="true">Product Price</th>
-                        
-                    </tr>
-                    <tr *ngFor="let pd of service.list">
-                        
-                        <input type="checkbox" value=" {{pd.productId}}" (change)="onChange(pd.productName, $event)">
-                        <td >{{pd.productId}}</td>
-                        <td >{{pd.productName}}</td>
-                        <td >{{pd.productPrice}}</td>
-                        
-                        
-                    </tr>
-                    <button (click)="Save()">Place Order</button>
-                    <label style="font-size:18px;color: red">{{errorMsg}}</label><br> 
-                     
-                </thead>
+        <div class="col-md-7">
+            <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+            <div>
                 
-            </table>
-            <input [(ngModel)]="products" style="font-size:18px;color: red;width: 500px;border-top: 0cm;border-left: 0cm;border-right: 0cm;border-bottom: 0cm;"><br>
-        
+                <table class="table">
+                    <thead class="thead-light">
+                        
+                            <h4 class="display-6 text-center">Add new  Products</h4>
+                        </thead>       
+                            
+                        
+                        <!-- <tr *ngFor="let pd of service.list"> -->
+                            
+                            <!-- <input type="checkbox" value=" {{pd.productId}}" (change)="onChange(pd.productName, $event)"> -->
+                            
+                            <div class="form-group">
+                                <!-- <input class="form-control form-control-lg" placeholder="Product ID" name="productId"
+                #productId="ngModel" [(ngModel)]="service.formData.productId"> -->
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" placeholder="Product Name" name="productName"
+                                #productName="ngModel" [(ngModel)]="service.formData.productName">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" placeholder="Price" name="Price"
+                                #productPrice="ngModel" [(ngModel)]="service.formData.productPrice">
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <button type="submit">Add</button>
+                            </div>
+                        <label style="font-size:18px;color: red">{{errorMsg}}</label><br> 
+                         
+                    
+                    
+                </table>              
+            
+            
+            </div>
+        </form>
         </div>
-    </div>
+        <!-- <div class="scrollit"> -->
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Select Product</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th data-sortable="true">Product Price</th>
+                    
+                </tr>
+                <tr *ngFor="let pd of service.list">
+                    
+                    <input type="checkbox" value=" {{pd.productId}}" (change)="onChange(pd.productName, $event)">
+                    <td >{{pd.productId}}</td>
+                    <td >{{pd.productName}}</td>
+                    <td >{{pd.productPrice}}</td>
+                    
+                    
+                </tr>
+                <button (click)="Save()">Place Order</button>
+                <label style="font-size:18px;color: red">{{errorMsg}}</label><br> 
+                 
+            </thead>
+            
+        </table>
+    <!-- </div> -->
+        <input [(ngModel)]="products" style="font-size:18px;color: red;width: 500px;border-top: 0cm;border-left: 0cm;border-right: 0cm;border-bottom: 0cm;"><br>
+    
+    
+    
 </div>

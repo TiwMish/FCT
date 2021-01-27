@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FCTServiceService } from '../shared/fctservice.service';
 import { FCTModel } from '../shared/fctmodel.model';
-import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl, NgForm } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-product',
@@ -10,7 +12,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
   ]
 })
 export class ProductComponent implements OnInit {
-  cartoonsData : FCTModel[];
+  
   isChecked: boolean;
   form: FormGroup;
   resultText: string[] = [];
@@ -62,9 +64,27 @@ export class ProductComponent implements OnInit {
      
   }
   
-  submit() {
-    console.log("this.form.value.name");
-    console.log("Test push from FCTApp");
+  // onSubmit(form: NgForm) {
+  //   //form.form.reset();
+  //   this.service.formData = new FCTModel();
+  // }
+
+  onSubmit(form: NgForm) {
+    this.insertRecord(form);
+  }
+  resetForm(form: NgForm) {
+    form.form.reset();
+    this.service.formData = new FCTModel();
+  }
+  
+  insertRecord(form: NgForm) {
+    this.service.postProduct().subscribe(
+      res => {
+       this.resetForm(form);
+        this.service.refreshList();
+      },
+      err => { console.log(err); }
+    )
   }
 }
 

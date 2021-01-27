@@ -25,3 +25,16 @@
   input.invalid {
     border-color: red;
   }
+
+  .scrollit {
+    overflow:scroll;
+    height:100px;
+}
+
+table{
+  table-layout: fixed;
+}
+tbody{
+      display: block;
+    overflow: auto;
+}
